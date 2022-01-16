@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+{{> arHead}}
+
+<body>
+    {{> arNavbar}}
+
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+            <i class="fa fa-book mb-2" style="font-size:3rem;color: white;"></i>
+            <h3 style="font-weight: bold; color: white;">الأخبار</h3>
+        </div>
+    </div>
+    <div class="w-100" style="margin-top: 0;background-color: white;">
+        <div class="features-boxed py-5">
+            <div class="container">
+
+                <div class="row features py-2">
+                    {{#each data}}
+                    <div class="col-sm-6 col-md-5 col-lg-4 item">
+                        <div class="box py-0 px-0">
+                            <img src="/img/{{image}}" class="img-fluid" alt="Etus Tiaret">
+                            <h3 class="name mt-3 px-2 text-bold">{{titleAr}}</h3>
+                            <h6 class="name mb-3 px-2 text-secondary" style="font-size: 12px; font-weight: 500;">
+                                {{postDate}}
+                            </h6>
+                            <p class="description px-3"> .....</p>
+                            <a href="/postDetails/{{id}}" class="learn-more btn btn-outline-primary mb-4">قراءة
+                                المزيد</a>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{>arFooter}}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

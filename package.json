@@ -1,0 +1,27 @@
+{
+  "name": "etus-website",
+  "version": "1.0.0",
+  "description": "ETUS TIARET WEBSITE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TALBI MOHAMED ABDELMADJID",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.2",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "npm": "^7.24.2",
+    "sharp": "^0.29.1",
+    "sqlite3": "^5.0.0",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
+  }
+}

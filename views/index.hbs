@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+{{> arHead}}
+
+<body>
+    {{> arNavbar}}
+    <div class="carousel slide" data-interval="1500" data-ride="carousel" id="carousel-1" >
+
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item car-img1 active">
+
+            </div>
+            <div class="carousel-item car-img2">
+
+            </div>
+            <div class="carousel-item car-img3">
+
+            </div>
+            
+            <div class="carousel-item car-img4">
+
+            </div>
+
+        </div>
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span
+                    class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
+                class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span
+                    class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+        <div class="carousel-indicators">
+                
+        </div>
+    </div>
+      {{!-- <hr style="border-bottom: solid 10px #057aed;margin:0;" /> --}}
+     <div class="features-boxed">
+        <div class="container">
+            <div class="row justify-content-center features" id="feature-line" style="margin-ttop: -120px;padding-bottom: 0;">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="card overlay-card text-right" style="border: none;border-radius 0;">
+                        <img class="card-img" src="/img/card.jpg" style="border: none;border-radius 0;width:100%;">
+                        <div class="card-img-overlay py-3" style="background-color: rgba(4, 93, 233, 0.7);">
+                            <h5 class="card-title mb-4 text-center" style="color: white;font-weight:bold;font-size:20px">مسارات الخطوط 
+                            </h5>
+                            {{!-- <p class="card-text" style="color: white;">إنشاء المؤسسة ، لم تتوقف عن التقدم لتأكيد نفسها كلاعب رائد في قطاع النقل الحضري</p> --}}
+                            <a href="/lines" class="btn btn-outline-light mb-4">قراءة المزيد</a>
+                        </div>
+                    </div>
+
+
+                   
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="card overlay-card text-right" style="border: none;border-radius 0;">
+                        <img class="card-img" src="/img/2154901.png" style="border: none;border-radius 0;width:100%;">
+                        <div class="card-img-overlay py-3" style="background-color: rgba(4, 93, 233, 0.7);">
+                            <h5 class="card-title mb-4 text-center" style="color: white;font-weight:bold;font-size:20px"> مواعيد الحافلات
+                            </h5>
+                            {{!-- <p class="card-text" style="color: white;">إنشاء المؤسسة ، لم تتوقف عن التقدم لتأكيد نفسها كلاعب رائد في قطاع النقل الحضري</p> --}}
+                            <a href="/timing" class="btn btn-outline-light mb-4">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="card overlay-card text-right" style="border: none;border-radius 0;">
+                        <img class="card-img" src="/img/sahl.jpg" style="border: none;border-radius 0;width:100%;">
+                        <div class="card-img-overlay py-3" style="background-color: rgba(4, 93, 233, 0.7);">
+                            <h5 class="card-title mb-4 text-center" style="color: white;font-weight:bold;font-size:20px">تطبيق حافلتي </h5>
+                            {{!-- <p class="card-text" style="color: white;">إنشاء المؤسسة ، لم تتوقف عن التقدم لتأكيد نفسها كلاعب رائد في قطاع النقل الحضري</p> --}}
+                            <a href="/hafilati-app" class="btn btn-outline-light mb-4">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{!-- services-------------------------------------------------------------- --}}
+
+<section id="yourServices" class="container">
+   <h2 class="display-4 text-center mt-5 mb-3">خدماتنا</h2>
+   <div class="row text-center mb-5 ">
+      <div class="col">
+         <div class="card h-100">
+            <img class="card-img-top" src="/img/20181218_103721.jpg" alt="Design">
+            <div class="card-body">
+               {{!-- <h4 class="card-title">Your First Service</h4> --}}
+               <p class="card-text">مركز التكوين لنيل شهادة الكفاءة المهنية لسائقي نق الاشخاص و البضائع</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="/services/service1" class="your-btn-primary-outer btn btn-primary">قراءة المزيد</a>
+            </div>
+         </div>
+      </div>
+      
+      <div class="col">
+         <div class="card h-100">
+            <img class="card-img-top" src="/img/20210617_141404.jpg" alt="Design">
+            <div class="card-body">
+               {{!-- <h4 class="card-title">Your Second Service</h4> --}}
+               <p class="card-text">خدمةالميكانيك السريعة</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="/services/service2" class="your-btn-primary-outer btn btn-primary">قراءة المزيد</a>
+            </div>
+         </div>
+      </div>
+      
+      <div class="col">
+         <div class="card h-100">
+            <img class="card-img-top" src="/img/carwash.jpg" alt="Design">
+            <div class="card-body">
+               {{!-- <h4 class="card-title">Your Second Service</h4> --}}
+               <p class="card-text"> محطة الخدمات لغسل و تشحيم السيارات</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="/services/service3" class="your-btn-primary-outer btn btn-primary">قراءة المزيد</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="col">
+         <div class="card h-100">
+            <img class="card-img-top" src="/img/DSC_0055.JPG" alt="Design">
+            <div class="card-body">
+               {{!-- <h4 class="card-title">Your Third Service</h4> --}}
+               <p class="card-text"> النقل الحضري و الشبه الحضري و النقل الضرفي و الاستثنائي و الموسمي</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="/services/service4" class="your-btn-primary-outer btn btn-primary">قراءة المزيد</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="col">
+         <div class="card h-100">
+            <img class="card-img-top" src="/img/1641109159702.JPG" alt="Design">
+            <div class="card-body">
+               {{!-- <h4 class="card-title">Your Third Service</h4> --}}
+               <p class="card-text">المراقبة التقنية للسيارات</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="/services/service5" class="your-btn-primary-outer btn btn-primary">قراءة المزيد</a>
+            </div>
+         </div>
+      </div>
+
+
+   </div>
+</section>
+
+
+
+            {{!-- services-------------------------------------------------------------- --}}
+                    
+                                    <div class="col-12 mx-0 my-0">
+                                        
+                                        <div class="team-boxed mt-0" style="background-color: white;">
+<div class="intro">
+                {{!-- <h2 class="text-center">كلمة السيد المدير العام</h2> --}}
+                {{!-- <p class="text-center">إنشاء المؤسسة ، لم تتوقف عن التقدم</p> --}}
+            </div>
+                                                
+                                               
+                                                    <div class="col-md-12 item mt-0">
+                                                        <div class="box mt-0">
+                                                            <h2 class="text-center">كلمة السيد المدير العام</h2>
+                                                            <img class="rounded-circle" src="/img/acfc0b7f-5c63-4999-ae92-fb88419ad87c.jpg">
+                                                            <h3 class="name">السيد عطاب محمد</h3>
+                                                            <p class="title">المدير العام</p>
+                                                            <p class="text-secondary text-bold" style="text-align: justify;font-family:adobe arabic; font-size: 25px;">يسرني ويشرفني أن أرحب بكم في موقعنا الإلكتروني الرسمي، الذي يقدم لكم معلومات شاملة عن المؤسسة العمومية للنقل الحضري و الشبه الحضري لولاية تيارت.</p>
+                                                            <p class="text-secondary text-bold" style="text-align: justify;font-family:adobe arabic; font-size: 25px;">إننا نحرص على أن نكون دائما المتميزين في مجال النقل العمومي للمسافرين، وأن يكون أحد أهم أهدافنا هو تطوير هذه الخدمة، ولذلك فقد استثمرت المؤسسة في خدمات جديدة لتنويع المداخيل مع الحفاظ دائما على الخدمة العمومية لنقل الأشخاص  وعززت قدرات الطاقم التقني والإداري في المؤسس لضمان أحسن الخدمات .</p>
+                                                            <p class="text-secondary text-bold" style="text-align: justify;font-family:adobe arabic; font-size: 25px;">بالرغم من البيئة المليئة بالتحديات والمنافسة الشديدة، فقد حرصت المؤسسة العمومية للنقل الحضري و الشبه الحضري لولاية تيارت على التميز في السوق المحلي و الوطني من خلال تطوير خدماتها و إدخال التكنولوجيا في المعاملات اليومية كان اخرها رقمنة التذكرة </p>
+                                                            <p class="text-secondary text-bold" style="text-align: justify;font-family:adobe arabic; font-size: 25px;">إن نهجنا في المؤسسة العمومية للنقل الحضري و الشبه الحضري لولاية تيارت هو أن نصل بخدماتنا إلى كل مكان في ولاية تيارت بهدف الوصول إلى أكبر عدد ممكن من الزبائن إيماناً منا بضرورة بناء جسور الثقة مع زبائننا، ولم نكتف بذلك بل قمنا بتطوير احتياجاتنا الإدارية لنحقق هذا النهج من خلال حملات صبر أراء الزبائن لتقييمنا و إعلامنا بإقتراحاتهم البناءة</p>
+                                                            <p class="text-secondary text-bold" style="text-align: justify;font-family:adobe arabic; font-size: 25px;">إنني أنتهز هذه الفرصة لأتقدم بجزيل الشكر والامتنان لكل من ساهم في تطوير هذه المؤسسة وسوف نواصل العمل بجد لضمان أن تبقى المؤسسة العمومية للنقل الحضري و الشبه الحضري لولاية تيارت رائدة لقطاع النقل في ولاية تيارت</p>
+                                                            
+
+                                                            <div class="social"><a href="https://www.facebook.com/mohamed.attab.5030"><i class="fa fa-facebook-official"></i></a><a href="#"><a href="#"><i class="fa fa-instagram"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                
+                                            
+                                        </div>
+                                        
+                                        
+
+                                    </div> 
+                             
+
+
+            </div>
+         </div>
+     </div>
+
+
+      <div class="features-blue py-4" style="background: #1735CE;
+            background: -webkit-radial-gradient(top left, #1735CE, #04297B);
+            background: -moz-radial-gradient(top left, #1735CE, #04297B);
+            background: radial-gradient(to bottom right, #1735CE, #04297B);">
+        <div class="container my-40">
+            <div class="intro">
+              <h3 class="text-center" style="clear: both">مؤسسة النقل الحضري و الشبه الحضري تيارت</h3>
+            </div>
+            <div class="row features text-right">
+                {{!-- <div class="col-sm-6 col-md-4 item js-slideout  text-right"><i class="fa fa-male icon"
+                        style="color: #ff4d60;"></i>
+                    <h3 class="name">   000 30  زبون</h3>
+                    <p class="description mx-5">إيبسوم على الإنترنت على إعادة تكرار</p>
+                </div> --}}
+                <div class="col-sm-6 col-md-6 item js-slideout text-center"><i class="fa fa-road icon-center"
+                        style="color: #ff4d60;"></i>
+
+                    <h3 class="name mx-5">7 خطوط</h3>
+                    <p class="description mx-5">الخط 26 : 05 خطوط <br>
+                                           الخط 27 : 02 خطوط <br>
+                                           الخط 28 : 06 خطوط <br>
+                                           الخط 29 : 05 خطوط <br>
+                                           الخط 30 : 05 خطوط <br>
+                                           الخط 31 : 04 خطوط <br>
+                                           الخط 32 : 01 خطوط <br>
+                                           </p>
+                </div>
+                <div class="col-sm-6 col-md-6 item js-slideout text-center"><i class="fa fa-bus icon-center"
+                        style="color: #ff4d60;"></i>
+                    <h3 class="name mx-5">28 حافلة</h3>
+                    <p class="description mx-5">الأسطول الحالي المستغل من طرف المؤسسة هو 28 حافلة حتى يتسنى لنا ضمان الخدمة بصفة دائمة لزبائننا، وهي موزعة عبر شبكة الخطوط التالية </p>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-8">
+                <div class="container my-3 js-slidein block">
+                    <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="1043" height="573" src="https://www.youtube.com/embed/IQbsVwWYSfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-4">
+
+             
+                <div class="container my-3 text-center">
+                    <h3 class="py-3" style="font-size: 30px; font-weight: 700;">أخر الاخبار</h3>
+                    {{#each data}}
+                    <div class="row py-3 row-border js-slideout block">
+                        <a href="postDetails/{{id}}">
+                            <div class="col-6 py-2 px-2">
+                                <p class="text-bold" style="font-weight: bold;">
+                                    {{titleAr}}
+
+                                </p>
+                            </div>
+
+                            <div class="col-6 py-2 px-2">
+                                <img src="/img/{{image}}" class="img-fluid my-2" alt="Etus Tiaret">
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                  
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {{> arFooter }}
+
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/slideIn.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+/node_modules
+/storage/*.key
+/storage/framework/laravel-excel
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+.idea
+.php_cs.cache
+/storage/clockwork
+/storage/debugbar

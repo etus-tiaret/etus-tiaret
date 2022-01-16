@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+{{> arHead}}
+
+<body>
+    {{> arNavbar}}
+    {{!-- **************************** modal ********************************* --}}
+    <div class="modal fade" id="tarifModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content my-0 mx-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">الأسعار</h3>
+
+                </div>
+                <div class="modal-body my-0 mx-0 px-0 py-0">
+                    <table class="table table-striped table-dark my-0">
+                        {{!-- <thead>
+                            <tr>
+                                <th scope="col" class="text-center">Type</th>
+                                <th scope="col" class="text-center">Valeur</th>
+                            </tr>
+                        </thead> --}}
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="text-center"
+                                    style="background:linear-gradient(135deg, #172a74, #21a9af);">التذاكر الورقية</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">رحلة عادية</td>
+                                <td class="text-center">15 DA</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" colspan="2" style="background-color: #ff4d60;">تطبيق حافلتي</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">رحلة عادية</td>
+                                <td class="text-center">15 DA</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">اشتراك شهري</td>
+                                <td class="text-center">//</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">اشتراك سنوي</td>
+                                <td class="text-center">//</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{!-- **************************** modal ********************************* --}}
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+            <i class="fa fa-history mb-2" style="font-size:3rem;color: white;"></i>
+            <h3 style="font-weight: bold; color: white;">جدول مواعيد الحافلات </h3>
+        </div>
+    </div>
+    <div class="w-100 py-2 px-2" style="margin-top: 0;background-color: white;">
+        <div class="container-fluid  py-3 px-3">
+
+            <div class="row">
+                <div class="d-none d-md-block col-md-3">
+                    <div class="px-3 py-3 text-center " style="border-radius: 10px; color:white;background: #1735CE;
+                        background: -webkit-radial-gradient(top left, #1735CE, #04297B);
+                        background: -moz-radial-gradient(top left, #1735CE, #04297B);
+                        background: radial-gradient(to bottom right, #1735CE, #04297B);">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-26-tab"
+                                data-toggle="pill" href="#v-pills-26" role="tab" onclick="changeUrl('/timing/26')"
+                                aria-controls="v-pills-26" aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">26</div>
+                                </div>
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-27-tab"
+                                data-toggle="pill" href="#v-pills-27" role="tab" aria-controls="v-pills-27"
+                                onclick="changeUrl('/timing/27')" aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">27</div>
+                                </div>
+
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-28-tab"
+                                data-toggle="pill" href="#v-pills-28" role="tab" aria-controls="v-pills-28"
+                                onclick="changeUrl('/timing/28')" aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">28</div>
+                                </div>
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-29-tab"
+                                data-toggle="pill" href="#v-pills-29" role="tab" aria-controls="v-pills-29"
+                                onclick="changeUrl('/timing/29')" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">29</div>
+                                </div>
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-30-tab"
+                                data-toggle="pill" href="#v-pills-30" role="tab" aria-controls="v-pills-30"
+                                onclick="changeUrl('/timing/30')" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">30</div>
+                                </div><i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-31-tab"
+                                data-toggle="pill" href="#v-pills-31" role="tab" aria-controls="v-pills-31"
+                                onclick="changeUrl('/timing/31')" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">31</div>
+                                </div><i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-32-tab"
+                                data-toggle="pill" href="#v-pills-32" role="tab" aria-controls="v-pills-32"
+                                onclick="changeUrl('/timing/32')" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">32</div>
+                                </div>
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="px-0 pt-3 pb-3" style="background-color: white; border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+                        <div class="tab-content" id="v-pills-tabContent">
+
+                            <div class="tab-pane fade-tab" id="v-pills-26" role="tabpanel"
+                                aria-labelledby="v-pills-26-tab">
+
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/26" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">26</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                                <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504 سكن
+                                            </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق زعرورة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الاقامة الجامعية (2000 سرير)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الجامعة (الحديقة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز التجاري "اليسر"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الغسيل "لكادات"
+                                            </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">نفطال</div>
+                                              <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز القديم للحرف التقليدية</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محل الخراطة "حماني"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركب الجواري "المدرسة"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المكتب القديم لمفتشية العمل</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية النشاط الاجتماعي</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق "المقبرة"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل (stop)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق ( مركز الفروسية )</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الجامعة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الجامعة (كارمان)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">القرية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحرس البلدي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطحنة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية الجديدة</div>
+                                        </div>
+
+                                    </div>
+                                 </div>
+
+                                    <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-26" aria-expanded="ture"
+                                                aria-controls="matin-26">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-26" aria-expanded="false"
+                                                aria-controls="soir-26">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-26" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        
+                                                            
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>-</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-26" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        <td>13:00 (504 logts)<br>18:20 (karmane)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>12:24 (504 logts)<br>18:24 (504 logts)</td>
+                                                        <td>12:24 (504 logts)<br>18:24 (504 logts)</td>
+                                                        <td>12:24 (504 logts)<br>18:24 (504 logts)</td>
+                                                        <td>12:24 (504 logts)<br>18:24 (504 logts)</td>
+                                                        <td>12:24 (504 logts)<br>18:24 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                     <tr>
+                                                        <td>-</td>
+                                                        <td>13:18 (504 logts)<br>18:33 (karmane)</td>
+                                                        <td>13:18 (504 logts)<br>18:33 (karmane)</td>
+                                                        <td>13:18 (504 logts)<br>18:33 (karmane)</td>
+                                                        <td>13:18 (504 logts)<br>18:33 (karmane)</td>
+                                                        <td>13:18 (504 logts)<br>18:33 (karmane)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                     <tr>
+                                                        <td>-</td>
+                                                        <td>12:42 (504 logts)<br>18:37 (504 logts)</td>
+                                                        <td>12:42 (504 logts)<br>18:37 (504 logts)</td>
+                                                        <td>12:42 (504 logts)<br>18:37 (504 logts)</td>
+                                                        <td>12:42 (504 logts)<br>18:37 (504 logts)</td>
+                                                        <td>12:42 (504 logts)<br>18:37 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+                                
+
+
+
+
+
+
+
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-27" role="tabpanel"
+                                aria-labelledby="v-pills-27-tab">
+
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/27" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">27</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                              <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+
+                                                                                        
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 220 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطعم (جامعة التكوين المتواصل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد العلوم الفلاحية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق ( المنظر الجميل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مركز البريد المنظر الجميل </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 700 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي) </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الاخيرة لحي السوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر لحي السوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(التيتانيك) </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مسجد حي التفاح</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الاخيرة لحي التفاح</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي البناء الذاتي 405 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 282 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (الشرق)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حظيرة البلدية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية المتعددة الشعب</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الاذاعة المحلية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 40 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الريجينة</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الخزينة العمومية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحي الاداري (100مكتب)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات (حي قيطون)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات ابن باديس</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مكتبة بوقانون</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عين الجنان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات 9EME</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الخدمات بوفاتح</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى المتيجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ثانوية ابن رستم</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الهاشمي العربي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى يوسف دمرجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الشارة</div>
+                                            
+                                            
+                                            
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-27" aria-expanded="ture"
+                                                aria-controls="matin-27">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-27" aria-expanded="false"
+                                                aria-controls="soir-27">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-27" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:10 (220 logts) <br>13:30 (220 logts)</td>
+                                                        <td>06:10 (220 logts) <br>13:30 (220 logts)</td>
+                                                        <td>06:10 (220 logts) <br>13:30 (220 logts)</td>
+                                                        <td>06:10 (220 logts) <br>13:30 (220 logts)</td>
+                                                        <td>06:10 (220 logts) <br>13:30 (220 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:10 (hôpital)<br>12:35 (220 logts)</td>
+                                                        <td>06:10 (hôpital)<br>12:35 (220 logts)</td>
+                                                        <td>06:10 (hôpital)<br>12:35 (220 logts)</td>
+                                                        <td>06:10 (hôpital)<br>12:35 (220 logts)</td>
+                                                        <td>06:10 (hôpital)<br>12:35 (220 logts)</td>                                                        
+                                                        <td>-</td>
+                                                        
+                                                            
+                                                    
+                                                    </tr>
+                                                   
+
+
+                                                    
+
+
+                                                    
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-27" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>13:30 (220 logts)<br>18:15  (hôpital)</td>
+                                                        <td>13:30 (220 logts)<br>18:15  (hôpital)</td>
+                                                        <td>13:30 (220 logts)<br>18:15  (hôpital)</td>
+                                                        <td>13:30 (220 logts)<br>18:15  (hôpital)</td>
+                                                        <td>13:30 (220 logts)<br>18:15  (hôpital)</td>
+                                                        
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>12:35 (220 logts)<br>18:15 (220 logts)</td>
+                                                        <td>12:35 (220 logts)<br>18:15 (220 logts)</td>
+                                                        <td>12:35 (220 logts)<br>18:15 (220 logts)</td>
+                                                        <td>12:35 (220 logts)<br>18:15 (220 logts)</td>
+                                                        <td>12:35 (220 logts)<br>18:15 (220 logts)</td>
+                                                        
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+                                                 
+
+
+                                                   
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-28" role="tabpanel"
+                                aria-labelledby="v-pills-28-tab">
+
+
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/28" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">28</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504 سكن</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (زعرورة)</div>
+                                            <span class="divider"></span>
+                                            
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار 1</div>
+                                            
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي المنار 2</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">وكالة البيع FOTONs</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المطعم (جامعة التكوين المتواصل) </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الصيدلية </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (التيتانيك)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">دار العجزة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(الشرق)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">كشك الهاتف (282 سكن)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المسجد (حي 282 مسكن)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">إبتدائية القاعدة رقم 5</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محلات حي 405 مسكن</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2"> ملتقى الطرق (الامن العاشر)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">جامعة كارمان</div>
+                                
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-28" aria-expanded="ture"
+                                                aria-controls="matin-29">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-28" aria-expanded="false"
+                                                aria-controls="soir-29">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-28" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>
+                                                        <td>06:06  (504 logts)<br>12:06  (504 logts)</td>  
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>
+                                                        <td>06:06 (université)<br>12:51 (504 logts)</td>                                                      
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td> 
+                                                        <td>06:19 (504 logts)<br>12:19 (504 logts)</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        <td>06:19 (université)<br>13:04 (504 logts)</td>
+                                                        
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>07:10 (B.MESBAH)<br>12:32  (504 logts)</td>
+                                                        <td>-</td>  
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:32 (université)<br>13:17 (504 logts)</td>
+                                                        <td>06:32 (université)<br>13:17 (504 logts)</td>
+                                                        <td>06:32 (université)<br>13:17 (504 logts)</td>
+                                                        <td>06:32 (université)<br>13:17 (504 logts)</td>
+                                                        <td>06:32 (université)<br>13:17 (504 logts)</td>
+                                                        <td>-</td>  
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-28" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        <td>12:06 (504 logts)<br>18:11 (504 logts)</td>
+                                                        
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td>
+                                                        <td>12:51 (504 logts)<br>18:11 (université)</td> 
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        <td>12:19 (504 logts)<br>18 :25 (504 logts)</td>
+                                                        
+                                                    </tr>
+
+                                                     <tr>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        <td>13:04 (504 logts)<br>18:25 (université)</td>
+                                                        
+                                                    </tr>
+
+                                                     <tr>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>12 :32 (504 logts)<br>18:20 (b,mesbah)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>13 :17 (504 logts)<br>18:32 (504 logts)</td>
+                                                        <td>13 :17 (504 logts)<br>18:32 (504 logts)</td>
+                                                        <td>13 :17 (504 logts)<br>18:32 (504 logts)</td>
+                                                        <td>13 :17 (504 logts)<br>18:32 (504 logts)</td>
+                                                        <td>13 :17 (504 logts)<br>18:32 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-29" role="tabpanel"
+                                aria-labelledby="v-pills-29-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/29" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">29</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                       <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)
+                                            </div>
+                                            <span class="divider"></span>
+                                                                    <div class="badge badge-pill badge-outline-blue my-2">المطعم(جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">السوق(المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي لحي السوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (التيتانيك)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">دار العجزة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(الشرق)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(المقبرة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل(STOP)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (مركز الفروسية)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(الجامعة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الجامعة(كارمان)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">القرية</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الحرس البلدي</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المطحنة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الثانوية الجديدة (كارمان)</div>
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-29" aria-expanded="ture"
+                                                aria-controls="matin-29">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-29" aria-expanded="false"
+                                                aria-controls="soir-29">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-29" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        <td>06:06 (s.taxis) <br>12 :06  (s.taxis)</td>
+                                                        
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+                                                        <td>06:15 (karmane)<br>13:00 (s.taxis)</td>
+        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        <td>06:24  (s.taxis)<br>12:24 (taxis)</td>
+                                                        
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td>
+                                                        <td>06:33 (karmane)<br>13:18 (s.taxis)</td> 
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td>
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td>
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td>
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td>
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td>
+                                                        <td>06:42 (s.taxis)<br>12 :42 (s.taxis)</td> 
+                                                        <td>-</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-29" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                        <td>12:06 (S.TAXIS) <br>18:11 (S.TAXIS)</td>
+                                                         
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                        <td>13 :00  (S.TAXIS)<br>18:20 (karmane)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        <td>12:24 (S.TAXIS)<br>18:24 (S.TAXIS)</td>
+                                                        
+                                                        
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                        <td>13:18 (S.TAXIS)<br>18:33 (karmane )</td>
+                                                         
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>
+                                                        <td>12:42 (S.TAXIS)<br>18:37 (S.TAXIS)</td>    
+                                                        <td>-</td>
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-30" role="tabpanel"
+                                aria-labelledby="v-pills-30-tab">
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/30" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">30</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                          <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            
+                                            <div class="badge badge-pill badge-outline-blue my-2">علي معاشي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(زعرورة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار1</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار 2</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">وكالة البيع FOTON</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطعم(جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح(المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(الامن الوطني)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية مسح الاراضي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز الجديد لبنك الفلاحة والتنمية الريفية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملعب(قايد احمد)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية الحماية المدنية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سرسو</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد التربية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مركز البريد</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات حي قيطون</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مكتبة "بوقانون"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عين الجنان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات9EME</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى يوسف دمرجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">نقطة التوقف (الابتدائية)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المثلجات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي1500 سكن AADL</div>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-30" aria-expanded="ture"
+                                                aria-controls="matin-30">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-30" aria-expanded="false"
+                                                aria-controls="soir-30">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-30" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        <td>06:06  (504 logts) <br> 12:06 (504 logts)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        <td>06:15 (Karmane)<br>13:00  (504 logts)</td>
+                                                        
+                                                            
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>06:24 (504 logts)<br>12:24 (504 logts)</td>
+                                                        <td>-</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>06:33 (Karmane)<br>13:18 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>06:42 (504 logts)<br>12:42 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-30" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        <td>12:50 (504 logts) <br>18:35 (AADL)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+                                                        <td>12:10 (504 logts)<br>18:10 (AADL)</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>13:10 (504 logts)<br>18:20 (504 logts)</td>
+                                                        <td>-</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>12:30 (504 logts)<br>18:20 (AADL)</td>
+                                                        <td>12:30 (504 logts)<br>18:20 (AADL)</td>
+                                                        <td>12:30 (504 logts)<br>18:20 (AADL)</td>
+                                                        <td>12:30 (504 logts)<br>18:20 (AADL)</td>
+                                                        <td>12:30 (504 logts)<br>18:20 (AADL)</td>
+                                                        <td>-</td>  
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>13:30 (504 logts)<br>18:30 (504 logts)</td>
+                                                        <td>13:30 (504 logts)<br>18:30 (504 logts)</td>
+                                                        <td>13:30 (504 logts)<br>18:30 (504 logts)</td>
+                                                        <td>13:30 (504 logts)<br>18:30 (504 logts)</td>
+                                                        <td>13:30 (504 logts)<br>18:30 (504 logts)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-31" role="tabpanel"
+                                aria-labelledby="v-pills-31-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/31" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">31</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                          <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">المجمعات السكنية (زعرورة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سكنات LPA (زعرورة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2"> وكالة البيع FOTON </div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لمطعم (جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية-ملتقى الطرق ( الأمن الولائي)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محلات تاج السلطان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الشؤون الدينية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الأخيرة لحي سوناتيبا (super posée )</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الوكالة المحلية للتشغيل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لفيدا01</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لفيدا02</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حظيرة البلدية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية المتعددة الشعب</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">دار المالية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">بنك (BEA)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية النشاط الاجتماعي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق ( المقبرة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل (STOP)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الخدمات (gbs)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي خروبي الميلود 1900 سكن</div>
+                                            
+                                            
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                 <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-31" aria-expanded="ture"
+                                                aria-controls="matin-31">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-31" aria-expanded="false"
+                                                aria-controls="soir-31">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-31" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                        <td>06:10 (u.snmital)<br>12:50 (u.snmital)</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        <td>06:10 (atrak)<br>12:00  (u.snmital)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:35 (u.snmital)<br>13:15 (u.snmital)</td>
+                                                        <td>06:35 (u.snmital)<br>13:15 (u.snmital)</td>
+                                                        <td>06:35 (u.snmital)<br>13:15 (u.snmital)</td>
+                                                        <td>06:35 (u.snmital)<br>13:15 (u.snmital)</td>
+                                                        <td>06:35 (u.snmital)<br>13:15 (u.snmital)</td>
+                                                        <td>-</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>06:35 (atrack)<br>12:25 (u.snmital)</td>
+                                                        <td>06:35 (atrack)<br>12:25 (u.snmital)</td>
+                                                        <td>06:35 (atrack)<br>12:25 (u.snmital)</td>
+                                                        <td>06:35 (atrack)<br>12:25 (u.snmital)</td>
+                                                        <td>06:35 (atrack)<br>12:25 (u.snmital)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-31" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-responsive table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td>
+                                                        <td>12:50 (u.snmital)<br>18:35 (ATRAK)</td> 
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>12:00 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:35 (u.snmital)</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>13:15 (u.snmital)<br>18:20 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:20 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:20 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:20 (u.snmital)</td>
+                                                        <td>13:15 (u.snmital)<br>18:20 (u.snmital)</td>
+                                                        <td>-</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>12:25 (u.snmital)<br>18:20 (ATRAK)</td>
+                                                        <td>12:25 (u.snmital)<br>18:20 (ATRAK)</td>
+                                                        <td>12:25 (u.snmital)<br>18:20 (ATRAK)</td>
+                                                        <td>12:25 (u.snmital)<br>18:20 (ATRAK)</td>
+                                                        <td>12:25 (u.snmital)<br>18:20 (ATRAK)</td>
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-32" role="tabpanel"
+                                aria-labelledby="v-pills-32-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank"
+                                                class="btn btn-outline-primary mb-4" style="width: 30%;">طباعة</a> --}}
+                                            <a href="/lines/32" class="btn btn-outline-success mb-4"
+                                                style="width: 30%;">
+                                                الخطوط</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal"
+                                                class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-right">
+                                        <h3 style="display: inline;font-weight: bold;">الخط</h3>
+                                        <div class="badge badge-pill badge-outline-dark mx-2"
+                                            style="font-size:20px ; display: inline-block; color: black;">32</div>
+                                        <span style="border-right: solid 1px lightgrey;display: inline;"></span>
+                                        <p class="text-muted mx-2"
+                                            style="font-size: 13px; font-weight:700;display: inline;">
+                                            حافلة تمر كل 45 دقيقة
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                       <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 40 سكن</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد التربية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية الحماية المدنية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملعب "قايد احمد"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز الجديد لبنك الفلاحة والتنمية الريفية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية مسح الاراضي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة كارجوا</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي EPLF 1</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي EPLF2(المقهى)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مسجد السلام</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي السانية- محطة سونلغاز</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الوحدة الجمهورية للشرطة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي عين مصباح</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مدخل القرية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2"> ببان مصباح</div>
+                                             
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                  <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            <button class="btn btn-outline-primary mb-4" type="button"
+                                                data-toggle="collapse" data-target="#matin-32" aria-expanded="ture"
+                                                aria-controls="matin-32">
+                                                الصباح
+                                            </button>
+                                            <button class="btn btn-outline-dark mb-4" type="button"
+                                                data-toggle="collapse" data-target="#soir-32" aria-expanded="false"
+                                                aria-controls="soir-32">
+                                                المساء
+                                            </button>
+                                        </div>
+
+
+
+                                        <div class="collapse" id="matin-32" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">الصباح</h3>
+                                            <table class="table table-striped table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                        <td>-</td>
+                                                        <td>06:35 (40 logts)<br>13:05 (40 logts)</td>
+                                                        <td>06:35 (40 logts)<br>13:05 (40 logts)</td>
+                                                        <td>06:35 (40 logts)<br>13:05 (40 logts)</td>
+                                                        <td>06:35 (40 logts)<br>13:05 (40 logts)</td>
+                                                        <td>06:35 (40 logts)<br>13:05 (40 logts)</td>
+
+                                                        <td>-</td>
+                                                        
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="collapse" id="soir-32" style="font-family: Arial">
+                                            <h3 class="my-3 text-bold text-right">المساء</h3>
+                                            <table class="table table-striped table-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">السبت</th>
+                                                        <th scope="col">الاحد</th>
+                                                        <th scope="col">الاثنين</th>
+                                                        <th scope="col">الثلاثاء</th>
+                                                        <th scope="col">الاربعاء</th>
+                                                        <th scope="col">الخميس</th>
+                                                        <th scope="col">الجمعة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                         <td>-</td>
+                                                         <td>13:05 (40 logts)<br>18:25 (40 logts )</td>
+                                                         <td>13:05 (40 logts)<br>18:25 (40 logts )</td>
+                                                         <td>13:05 (40 logts)<br>18:25 (40 logts )</td>
+                                                         <td>13:05 (40 logts)<br>18:25 (40 logts )</td>
+                                                         <td>13:05 (40 logts)<br>18:25 (40 logts )</td>
+                                                         <td>-</td>
+                                                         
+                                                    </tr>
+                                                   
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    {{> arFooter }}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+        window.onload = function () {
+
+            clickTabs({{ item }})
+        }
+    </script>
+</body>
+
+</html>

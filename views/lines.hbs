@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+{{> arHead}}
+<body>
+
+ {{> arNavbar}}
+       {{!-- **************************** modal ********************************* --}}
+                                <div class="modal fade" id="tarifModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content my-0 mx-0">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel">الأسعار</h3>
+                                                
+                                            </div>
+                                            <div class="modal-body my-0 mx-0 px-0 py-0">
+                                                 <table class="table table-striped table-dark my-0">
+                                                {{!-- <thead>
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Type</th>
+                                                        <th scope="col" class="text-center">Valeur</th>                                                        
+                                                    </tr>
+                                                </thead> --}}
+                                                <tbody>
+                                                    <tr>  
+                                                        <td colspan="2" class="text-center" style="background:linear-gradient(135deg, #172a74, #21a9af);">التذاكر الورقية</td>
+                                                    </tr>
+                                                    <tr>                                                        
+                                                        <td class="text-center">رحلة عادية</td>
+                                                        <td class="text-center">15 DA</td>                                                       
+                                                    </tr>
+                                                    <tr>                                                      
+                                                      <td class="text-center" colspan="2" style="background-color: #ff4d60;">تطبيق حافلتي</td>                                                
+                                                    </tr>
+                                                    <tr>                                                        
+                                                        <td class="text-center">رحلة عادية</td>
+                                                        <td class="text-center">15 DA</td>                                                       
+                                                    </tr>
+                                                    <tr>                                                        
+                                                        <td class="text-center">اشتراك شهري</td>
+                                                        <td class="text-center">//</td>                                                       
+                                                    </tr>
+                                                    <tr>                                                        
+                                                        <td class="text-center">اشتراك سنوي</td>
+                                                        <td class="text-center">//</td>                                                       
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                    {{!-- **************************** modal ********************************* --}}
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+            <i class="fa fa-sitemap mb-2" style="font-size:3rem;color: white;"></i>
+            <h3 style="font-weight: bold; color: white;">الخطوط</h3>
+        </div>
+    </div>
+    <div class="w-100 py-2 px-2" style="margin-top: 0;background-color: white;">
+        <div class="container-fluid  py-3 px-3">
+
+            <div class="row">
+                <div class="d-none d-md-block col-md-3">
+                    <div class="px-3 py-3 text-center " style="border-radius: 10px; color:white;background: #1735CE;
+                        background: -webkit-radial-gradient(top left, #1735CE, #04297B);
+                        background: -moz-radial-gradient(top left, #1735CE, #04297B);
+                        background: radial-gradient(to bottom right, #1735CE, #04297B);">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-26-tab" data-toggle="pill"
+                                onclick="changeUrl('/lines/26')"
+                                href="#v-pills-26" role="tab" aria-controls="v-pills-26" aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">26</div>
+                                </div>
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-27-tab"
+                                data-toggle="pill" href="#v-pills-27" role="tab" aria-controls="v-pills-27"
+                                onclick="changeUrl('/lines/27')"
+                                aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">27</div>
+                                </div>
+
+                                <i class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-28-tab" data-toggle="pill"
+                                href="#v-pills-28" role="tab" aria-controls="v-pills-28"
+                                onclick="changeUrl('/lines/28')"
+                                aria-selected="true">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">28</div>
+                                </div>
+                                <i
+                                    class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-29-tab" data-toggle="pill"
+                            onclick="changeUrl('/lines/29')"
+                                href="#v-pills-29" role="tab" aria-controls="v-pills-29" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">29</div>
+                                </div>
+                                <i
+                                    class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-30-tab" data-toggle="pill"
+                            onclick="changeUrl('/lines/30')"
+                                href="#v-pills-30" role="tab" aria-controls="v-pills-30" aria-selected="false"><div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">30</div>
+                                </div><i
+                                    class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-31-tab" data-toggle="pill"
+                            onclick="changeUrl('/lines/31')"
+                                href="#v-pills-31" role="tab" aria-controls="v-pills-31" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">31</div>
+                                </div><i
+                                    class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-center align-items-center" id="v-pills-32-tab" data-toggle="pill"
+                            onclick="changeUrl('/lines/32')"
+                                href="#v-pills-32" role="tab" aria-controls="v-pills-32" aria-selected="false">
+                                <div>
+                                    <span>الخط</span>
+                                    <div class="badge badge-pill badge-outline-primary mx-2">32</div>
+                                </div>
+                                <i
+                                    class="fa fa-chevron-left align-right"
+                                    style="font-weight:normal;margin-left: 5px;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="px-2 pt-3 pb-5" style="background-color: white; border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+                        <div class="tab-content" id="v-pills-tabContent">
+
+                            <div class="tab-pane fade-tab" id="v-pills-26" role="tabpanel"
+                                aria-labelledby="v-pills-26-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/26" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">26</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+                                                طول الخط : 10.86 كلم ذهاب و 10.86 كلم اياب                                            </p>
+
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                                <!-- ********************** timeline ******************************* -->
+
+                                 <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504 سكن
+                                            </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق زعرورة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الاقامة الجامعية (2000 سرير)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الجامعة (الحديقة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز التجاري "اليسر"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الغسيل "لكادات"
+                                            </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين </div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">نفطال</div>
+                                              <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز القديم للحرف التقليدية</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محل الخراطة "حماني"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركب الجواري "المدرسة"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المكتب القديم لمفتشية العمل</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية النشاط الاجتماعي</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق "المقبرة"</div>
+                                               <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل (stop)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق ( مركز الفروسية )</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الجامعة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الجامعة (كارمان)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">القرية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحرس البلدي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطحنة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية الجديدة</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                 <iframe src="https://www.google.com/maps/d/embed?mid=1WTwyL_sA0WdNBS5Y9vtHq2wgPnlTf1VC&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+                              
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-27" role="tabpanel" aria-labelledby="v-pills-27-tab">
+
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/27" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">27</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+طول الخط : 14.8 كلم ذهاب و 13.8 كلم اياب                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                             <!-- ********************** timeline ******************************* -->
+
+                                  <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+
+                                                                                        
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 220 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطعم (جامعة التكوين المتواصل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد العلوم الفلاحية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق ( المنظر الجميل)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مركز البريد المنظر الجميل </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 700 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي) </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الاخيرة لحي السوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر لحي السوناتيبا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(التيتانيك) </div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مسجد حي التفاح</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الاخيرة لحي التفاح</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي البناء الذاتي 405 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 282 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (الشرق)</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حظيرة البلدية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية المتعددة الشعب</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الاذاعة المحلية</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 40 سكن</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الريجينة</div>
+                                                                                        <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الخزينة العمومية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحي الاداري (100مكتب)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات (حي قيطون)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات ابن باديس</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مكتبة بوقانون</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عين الجنان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات 9EME</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الخدمات بوفاتح</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى المتيجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ثانوية ابن رستم</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الهاشمي العربي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى يوسف دمرجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي الشارة</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1obBAFYIUGdGBZgQ7EK5l9N_jZ0ZgGS2J&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+
+                   
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-28" role="tabpanel" aria-labelledby="v-pills-28-tab">
+
+
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/28" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">28</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+طول الخط : 11.46 كلم ذهاب و 11.54 كلم اياب                                            </p>
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+  <!-- ********************** timeline ******************************* -->
+
+                                 <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504 سكن</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (زعرورة)</div>
+                                            <span class="divider"></span>
+                                            
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار 1</div>
+                                            
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي المنار 2</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">وكالة البيع FOTONs</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المطعم (جامعة التكوين المتواصل) </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الصيدلية </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة </div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (التيتانيك)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">دار العجزة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(الشرق)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">كشك الهاتف (282 سكن)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المسجد (حي 282 مسكن)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">إبتدائية القاعدة رقم 5</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محلات حي 405 مسكن</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2"> ملتقى الطرق (الامن العاشر)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">جامعة كارمان</div>
+                                
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1oFBQaggTfRoq5wuxykbZZMyF9IUGPzR-&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+
+
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-29" role="tabpanel" aria-labelledby="v-pills-29-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/29" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">29</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+طول الخط : 10.3 كلم ذهاب و 9.3 كلم اياب                                            </p>
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+              <!-- ********************** timeline ******************************* -->
+
+                                
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)
+                                            </div>
+                                            <span class="divider"></span>
+                                                                    <div class="badge badge-pill badge-outline-blue my-2">المطعم(جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">السوق(المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">حي الرحمة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي لحي السوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">سوق الخضر سوناتيبا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (التيتانيك)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">دار العجزة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات الفيدا</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين(الشرق)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(المقبرة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل(STOP)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (مركز الفروسية)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(الجامعة)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الجامعة(كارمان)</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">القرية</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الحرس البلدي</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">المطحنة</div>
+                                            <span class="divider"></span>
+                                                                                        <div class="badge badge-pill badge-outline-blue my-2">الثانوية الجديدة (كارمان)</div>
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1YnMViD8oafhCZbBoUNoS3sr2iIiq823c&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+                
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-30" role="tabpanel" aria-labelledby="v-pills-30-tab">
+                                <div class="row mb-3">
+
+                                   <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/30" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">30</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+طول الخط : 12.66 كلم ذهاب و 12.66 كلم اياب                                            </p>
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+          <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            
+                                            <div class="badge badge-pill badge-outline-blue my-2">علي معاشي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 504</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(زعرورة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار1</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المنار 2</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">وكالة البيع FOTON</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المطعم(جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح(المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق(الامن الوطني)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية مسح الاراضي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز الجديد لبنك الفلاحة والتنمية الريفية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملعب(قايد احمد)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية الحماية المدنية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سرسو</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد التربية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مركز البريد</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات حي قيطون</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مكتبة "بوقانون"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عين الجنان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات9EME</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مستشفى يوسف دمرجي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">نقطة التوقف (الابتدائية)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي المثلجات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي1500 سكن AADL</div>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=17QRueSLS2CWlGMS-2w_hOzJ773D4OQMK&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+                               
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-31" role="tabpanel" aria-labelledby="v-pills-31-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/31" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">31</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+                                                طول الخط : 11.0 كلم ذهاب و 11.0 كلم اياب                                            </p>
+
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+              <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">المجمعات السكنية (زعرورة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سكنات LPA (زعرورة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2"> وكالة البيع FOTON </div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                             <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لمطعم (جامعة التكوين المتواصل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">سوق الفلاح (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">السوق (المنظر الجميل)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">العيادة المتعددة الخدمات</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الصيدلية-ملتقى الطرق ( الأمن الولائي)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محلات تاج السلطان</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الشؤون الدينية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الملحق البلدي سوناتيبا</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المحطة الأخيرة لحي سوناتيبا (super posée )</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الوكالة المحلية للتشغيل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لفيدا01</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">لفيدا02</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حظيرة البلدية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الثانوية المتعددة الشعب</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">دار المالية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">بنك (BEA)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية النشاط الاجتماعي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق ( المقبرة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">صيدلية عمارات عدل</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">عمارات عدل (STOP)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة الخدمات (gbs)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي خروبي الميلود 1900 سكن</div>
+                                            
+                                            
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1faoustc-MpoqkKoOqNBJm_eH1WXj-MvK&ll=35.36520761329621%2C1.3365099074096554&z=13" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+                                
+                                
+                            </div>
+
+                            <div class="tab-pane fade-tab" id="v-pills-32" role="tabpanel" aria-labelledby="v-pills-32-tab">
+                                <div class="row mb-3">
+
+                                    <div class="col-12">
+                                        <div class="btn-group" style="width: 100%;" role="group"
+                                            aria-label="Basic example">
+                                            {{!-- <a href="/documents/offre.pdf" target="_blank" class="btn btn-outline-primary mb-4"
+                                                style="width: 30%;">طباعة</a> --}}
+                                            <a href="/timing/32" class="btn btn-outline-success mb-4" style="width: 30%;">
+                                                الأوقات</a>
+                                            <button href="" data-toggle="modal" data-target="#tarifModal" class="btn btn-outline-dark mb-4" style="width: 30%;">الأسعار</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                      
+                                            <h3 style="display: inline;font-weight: bold;">الخط</h3>                                            
+                                            <div class="badge badge-pill badge-outline-dark mx-2" style="font-size:20px ; display: inline-block; color: black;">32</div>
+                                            <span style="border-right: solid 1px lightgrey;display: inline;"></span> 
+                                            <p class="text-muted mx-2" style="font-size: 13px; font-weight:700;display: inline;">
+                                                طول الخط : 15.6 كلم ذهاب و 15.6 كلم اياب                                            </p>
+                                            </p>
+
+                                        
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                <!-- ********************** timeline ******************************* -->
+
+                                <div class="row mt-3 mb-5">
+                                    <div class="col-12">
+                                        
+                                        <div class="divided  d-flex justify-content-start">
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي 40 سكن</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">معهد التربية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية الحماية المدنية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملعب "قايد احمد"</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">المركز الجديد لبنك الفلاحة والتنمية الريفية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مديرية مسح الاراضي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (الامن الولائي)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة كارجوا</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي EPLF 1</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي EPLF2(المقهى)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مسجد السلام</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">محطة نقل المسافرين (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">ملتقى الطرق (عين قاسمة)</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي السانية- محطة سونلغاز</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الحاسي</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">الوحدة الجمهورية للشرطة</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">حي عين مصباح</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2">مدخل القرية</div>
+                                            <span class="divider"></span>
+                                            <div class="badge badge-pill badge-outline-blue my-2"> ببان مصباح</div>
+                                             
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=10RhPA4FmBnS4f8LayKORJrXh8lWgC1t4&ll=35.324473955960286%2C1.4107506753508048&z=12" width="640" height="480" class="frame my-2" alt="Etus Tiaret"></iframe>
+
+
+                                <!-- ****************** timeline ****************************** -->
+
+
+
+
+
+
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+  {{> arFooter}}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+        
+        window.onload = function() {
+            
+            clickTabs({{item}})
+        }
+        
+    </script>
+</body>
+
+</html>

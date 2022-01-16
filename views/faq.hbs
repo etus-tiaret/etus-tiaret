@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+{{> arHead}}
+
+<body>
+
+
+
+    {{> arNavbar}}
+    <div class="modal fade" id="qstModal" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">راسلونا</h3>
+                    
+                </div>
+                <div class="modal-body px-5 py-5">
+                    
+                   
+                    <form onsubmit="sendQst();return false;">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: right;">
+                                
+                             
+                                    <div class="form-group">
+                                        <label for="name">الاسم</label>
+                                        <input type="text" class="form-control" id="name" style="font-family: 'Cairo', sans-serif;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">اللقب</label>
+                                        <input type="text" class="form-control" id="lastName" style="font-family: 'Cairo', sans-serif;">                                        
+                                    </div>   
+                                    <div class="form-group">
+                                        <label for="email">البريد الالكتروني</label>
+                                        <input type="text" class="form-control" id="email" style="font-family: 'Cairo', sans-serif;">                                        
+                                    </div>  
+                                    <div class="form-group">
+                                        <label for="message">الرسالة</label>
+                                        <br/>
+                                        <textarea id="message" name="message" maxlength="100" style="font-family: 'Cairo', sans-serif;width: 100%;height:100px">
+                                        </textarea>                                        
+                                    </div>       
+                                                          
+                            </div>                        
+                           
+                            <button type="submit" class="btn btn-outline-primary mx-3 my-3">إرسال</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+            <i class="fa fa-question-circle mb-2" style="font-size:3rem;color: white;"></i>
+            <h3 style="font-weight: bold; color: white;">انشغالاتكم</h3>
+        </div>
+    </div>
+    <div class="w-100" style="margin-top: 0;background-color:#fafafa;">
+        <div class="container py-5">
+
+            {{!-- <div class="row">
+                <div class="col-12">
+
+                    <div id="accordion">
+
+
+                        <div class="card">
+                            <div class="card-header p-0" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button href="#collapseOne"
+                                        class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                        aria-controls="collapseOne">
+                                        <p class="mb-0">قيد الانجاز</p>
+                                        <i class="fa fa-plus"></i>
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne"
+                                style="">
+                                <div class="card-body py-5 px-4">
+                                    <ol class="text-right">
+                                        <li>قيد الانجاز</li>
+                                        <li> باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة</li>
+                                        <li>لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب </li>
+                                        <li>تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات </li>
+                                        
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-0" id="headingTwo" role="tab">
+                                <h2 class="mb-0">
+                                    <button href="#collapseTwo"
+                                        class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <p class="mb-0">قيد الانجاز</p>
+                                        <i class="fa fa-plus"></i>
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-body py-5 px-4">
+                                     <p class="text-right">
+                                        هنالك العديد من الأنواع المتوفرة لنصوص
+                                             لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم
+                                             نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما
+                                             تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما
+                                             تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف
+                                             إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي
+                                           
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-0" id="headingThree" role="tab">
+                                <h2 class="mb-0">
+                                    <button href="#collapseThree"
+                                        class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <p class="mb-0">قيد الانجاز</p>
+                                        <i class="fa fa-plus"></i>
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-body py-5 px-4">
+                                   <p class="text-right">
+                                        هنالك العديد من الأنواع المتوفرة لنصوص
+                                             لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم
+                                             نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما
+                                             تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما
+                                             تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف
+                                             إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي
+                                           
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-0" id="headingFour" role="tab">
+                                <h2 class="mb-0">
+                                    <button href="#collapseFour"
+                                        class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <p class="mb-0">قيد الانجاز</p>
+                                        <i class="fa fa-plus"></i>
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-body py-5 px-4 px-md-5">
+                                   <p class="text-right">هنالك العديد من الأنواع المتوفرة لنصوص
+                                             لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم
+                                             نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما
+                                             تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما
+                                             تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف
+                                             إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي
+                                           </p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div> --}}
+           
+                 <div>
+                  <p class="text-center"> <br>  لطرح انشغالاتكم    <button class="btn btn-outline-dark mx-3" data-toggle="modal" data-target="#qstModal">أنقر هنا</button></p>
+                </div>
+    </div>
+    {{> arFooter}}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+     
+    </script>
+</body>
+
+</html>

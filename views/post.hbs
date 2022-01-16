@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+{{>arHead}}
+
+<body>
+    {{>arNavbar}}
+
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+           
+            <h3 style="font-weight: bold; color: white;max-width:400px;">{{data.titleAr}}</h3>
+        </div>
+    </div>
+
+    <div class="features-boxed py-5">
+        <div class="container text-right">
+            <div class="row mx-0 my-0">
+                <div class="col-12 mx-0 my-0">
+                    <img src="/img/{{data.image}}" class="img-fluid" alt="Etus Tiaret">
+                </div>
+                <div class="col-12 mx-0 my-5 post-details">
+                    
+                    <p class="py-3 text-secondary text-bold text-right">
+                        {{{data.descAr}}}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    {{>arFooter}}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

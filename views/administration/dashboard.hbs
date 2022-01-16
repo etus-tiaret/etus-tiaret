@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETUS TIARET | Administration</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/ionicons.min.css">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/noJS.css" />
+    </noscript>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/slidein.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    {{!-- **************************** modal post********************************* --}}
+    <div class="modal fade" id="newPostModal" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">New Post</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                   
+                    <form onsubmit="addPost();return false;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Francais</h4>
+                             
+                                    <div class="form-group">
+                                        <label for="postTitleFr">Titre</label>
+                                        <input type="text" class="form-control" id="postTitleFr">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postDescFr">Description</label>
+                                        <div contenteditable="true" dir="rtl" class="form-control" id="postDescFr" style="border: solid 1px #ff4d60;"></div>
+
+                                    </div>                             
+                            </div>
+                            <div class="col-md-12 my-3 text-right">
+                                <h4>العربية</h4>
+                         
+                                    <div class="form-group">
+                                        <label for="postTitleAr">العنوان</label>
+                                        <input type="text" class="form-control" id="postTitleAr" dir="rtl">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postDescAr">التفاصيل</label>                                       
+                                        <div contenteditable="true" dir="rtl" class="form-control" id="postDescAr" style="border: solid 1px #ff4d60;"></div>
+
+                                    </div>                         
+                            </div>
+                            <input type="file" name="image" id="image" accept="image/*" hidden/>
+                            <button class="btn btn-outline-success mx-3" onclick="$('#image').click();return false;">Browse Image</button>
+                            <button type="submit" class="btn btn-outline-primary mx-3">Save</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{!-- **************************** modal post********************************* --}}
+
+    {{!-- **************************** modal edit post********************************* --}}
+    <div class="modal fade" id="editPostModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Edit Post</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                   
+                    <form onsubmit="editPost();return false;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Francais</h4>
+                                    
+                                    <div class="form-group">
+                                        <label for="editPostTitleFr">Titre</label>
+                                        <input type="text" class="form-control" id="editPostTitleFr">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editPostDescFr">Description</label>                                        
+                                        <div contenteditable="true" dir="rtl" class="form-control" id="editPostDescFr" style="border: solid 1px #ff4d60;"></div>
+
+                                    </div>
+                                    <div class="form-check">
+                                        
+                                        <input type="checkbox" class="form-check-input" id="actif">
+                                        <label for="actif">Actif ?</label>
+                                    </div>                             
+                            </div>
+                            <div class="col-md-12 my-3" style="text-align: right;">
+                                <h4>العربية</h4>
+                         
+                                    <div class="form-group" dir="rtl">
+                                        <label for="editPostTitleAr" >العنوان</label>
+                                        <input dir="rtl" type="text" class="form-control" id="editPostTitleAr">
+                                    </div>
+                                    <div class="form-group" dir="rtl">
+                                        <label for="editPostDescAr">التفاصيل</label>
+                                        {{!-- <textarea dir="rtl" class="form-control" id="editPostDescAr"></textarea> --}}
+                                        <div contenteditable="true" dir="rtl" class="form-control" id="editPostDescAr" style="border: solid 1px #ff4d60;"></div>
+
+
+                                    </div>                         
+                            </div>
+                            <input type="file" name="editImage" id="editImage" accept="image/*" hidden/>
+                            <input type="text" name="id" id="id" hidden/>
+                            <button class="btn btn-outline-success mx-3" onclick="$('#editImage').click();return false;">Browse Image</button>
+                            <button type="submit" class="btn btn-outline-primary mx-3">Save</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{!-- **************************** modal edit post********************************* --}}
+
+
+    {{!-- **************************** modal user********************************* --}}
+    <div class="modal fade" id="newUserModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">New User</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <form onsubmit="addUser(); return false;">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="email">
+                                    <p style="color: red;" id="emailError"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                                </div>
+                                 
+                                <button type="submit" class="btn btn-outline-primary">Save</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{!-- **************************** modal user********************************* --}}
+
+
+
+
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="d-flex">
+
+                    <a href="/administration/dashboard" class="d-flex align-items-center mx-2">
+                        <img src="/img/logo.jpg" height="60">
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-outline-dark" onclick="logOut()">LOG OUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="border-bottom: solid 10px #ff4d60;" />
+
+    <div data-bs-parallax-bg="true" class="parallax d-flex">
+        <div class="mx-auto my-auto text-center">
+            <i class="fa fa-home mb-2" style="font-size:3rem;color: white;"></i>
+            <h3 style="font-weight: bold; color: white;">Administration</h3>
+        </div>
+    </div>
+    <div class="w-100 py-5 px-3" id="animated" style="margin-top: 0;background-color: white;">
+        <div class="py-3 px-3">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="px-3 py-3 text-center" style="border-radius: 10px; color:white;background: #1735CE;
+                        background: -webkit-radial-gradient(top left, #1735CE, #04297B);
+                        background: -moz-radial-gradient(top left, #1735CE, #04297B);
+                        background: radial-gradient(to bottom right, #1735CE, #04297B);">
+
+                        <div class="nav flex-column justify-content-between nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="horizontal">
+                            <a class="nav-link d-flex align-items-center  active justify-content-between"
+                                id="v-pills-posts-tab" data-toggle="pill" href="#v-pills-posts" role="tab" onclick="showPosts()"
+                                aria-controls="v-pills-posts" aria-selected="true">
+                                <div>Posts</div>
+                                <i class="fa fa-chevron-right align-right"
+                                    style="font-size:25px;margin-left: 10px;margin-right: 10px;"></i>
+
+                            </a>
+
+                            <a class="nav-link d-flex justify-content-between align-items-center" id="v-pills-users-tab"
+                                data-toggle="pill" href="#v-pills-users" role="tab" onclick="showUsers()"
+                                aria-controls="v-pills-users" aria-selected="true">
+                                <div>Users</div>
+                                <i class="fa fa-chevron-right align-right"
+                                    style="font-size:25px;margin-left: 10px;margin-right: 10px;"></i>
+
+                            </a>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="px-3 pb-5" style="background-color: white;">
+
+
+                        <div class="tab-content" id="v-pills-tabContent">
+
+
+
+
+                            <div class="tab-pane fade-tab active show my-2" id="v-pills-posts" role="tabpanel"
+                                aria-labelledby="v-pills-posts-tab">
+                                <button class="btn btn-outline-dark" data-toggle="modal"
+                                    data-target="#newPostModal">Add Post</button>
+
+                                <table class="table table-striped table-dark my-5">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Description</th>
+                                            <th>Image</th>
+                                            <th>Date</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="PostList">
+                                     
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane fade-tab my-2" id="v-pills-users" role="tabpanel"
+                                aria-labelledby="v-pills-users-tab">
+                                <button class="btn btn-outline-dark" data-toggle="modal"
+                                    data-target="#newUserModal">Add User</button>
+
+                                <table class="table table-striped table-dark my-5">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Password</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="userList">
+                                        
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+        window.onload = function() {
+            showPosts()
+        }
+
+    </script>
+</body>
+
+</html>
